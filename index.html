@@ -16,15 +16,56 @@
 
     <div>
       <main>
-        <a class="tile freiraum" href="http://freiraum-agentur.de">
-          <h2>Freiraum Agentur</h2>
-        </a>
-        <a href="https://kulturverein-petersburg.de" class="tile kulturverein">
-          <h2>Kulturverein Petersburg</h2>
-        </a>
-        <a href="https://kaff-os.de" class="tile kaff">
-          <h2>K.A.F.F.</h2>
-        </a>
+        <button class="tile freiraum">
+          <div class="tile__front">
+            <img src="/img/traumfabrik-musikprobenraeume.jpg" alt="Freiraum Agentur Schild">
+          </div>
+          <div class="tile__back">
+            <div class="tile__content">
+              <h2>Freiraum Agentur</h2>
+              <p>
+                Die Freiraum Agentur unterstützt bei der Eroberung von Freiraum,
+                gibt Beratung für den Erhalt von Freiraum und setzt sich für den
+                Schutz von kulturellen Freiraum ein.
+              </p>
+              <a class="button" href="http://freiraum-agentur.de">
+                Webseite
+              </a>
+            </div>
+          </div>
+        </button>
+        <button class="tile kulturverein">
+          <div class="tile__front">
+            <img src="/img/kulturverein-flyer.jpg" alt="Kulturverein Petersburg e.V. Flyer">
+          </div>
+          <div class="tile__back">
+            <div class="tile__content">
+              <h2>Kulturverein Petersburg</h2>
+              <p>
+                Der Kulturverein Petersburg e.V. ist der Träger des K.A.F.F.
+              </p>
+              <a class="button" href="https://kulturverein-petersburg.de">
+                Webseite
+              </a>
+            </div>
+          </div>
+        </button>
+        <button class="tile kaff">
+          <div class="tile__front">
+            <img src="/img/kaff-im-dunkeln.jpg" alt="K.A.F.F. im Dunkeln">
+          </div>
+          <div class="tile__back">
+            <div class="tile__content">
+              <h2>K.A.F.F.</h2>
+              <p>
+                Das K.A.F.F. ist ein Freiraum am Osnabrücker Hafen.
+              </p>
+              <a class="button" href="https://kaff-os.de">
+                Webseite
+              </a>
+            </div>
+          </div>
+        </button>
 
         <div class="logo">
           <h1>Freiraum Petersburg</h1>
@@ -37,5 +78,11 @@
     <a href="https://kulturverein-petersburg.de/impressum/">Impressum</a>
     <a href="https://kulturverein-petersburg.de/datenschutzerklaerung/">Datenschutz</a>
   </footer>
+
+  <script>
+    document.querySelectorAll('.tile').forEach((tile) => {
+      tile.addEventListener('click', () => tile.classList.toggle('flipped'));
+    });
+  </script>
 </body>
 </html>
