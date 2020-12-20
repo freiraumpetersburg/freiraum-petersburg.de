@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Karmilla";
+  src: url("/fonts/karmilla-regular-016-webfont.woff2") format("woff2"),
+       url("/fonts/karmilla-regular-016-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Karmilla";
+  src: url("/fonts/karmilla-bold-016-webfont.woff2") format("woff2"),
+       url("/fonts/karmilla-bold-016-webfont.woff") format("woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/quicksand-regular-webfont.woff") format("woff"),
+       url("/fonts/quicksand-regular-webfont.ttf") format("truetype");
+}
+
+/*******************************************************/
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: min(max(1rem, 4vw), 22px);
+}
+
+body {
+  font-family: Karmilla, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+a {
+  color: #F6A81C;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Quicksand;
+}
+
+/*******************************************************/
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* stupid chrome bug, making it break on `flex-direction: column` container.. */
+.wrapper > div {
+  flex: 1 1 100%;
+  display: flex;
+}
+
+.wrapper section {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #F6A81C;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(2, 1fr);;
+}
+
+.tile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-size: cover;
+  background-position: center;
+
+  text-indent: -9999px;
+}
+
+.freiraum {
+  background-color: #29A2C6;
+  background-image: url(/img/traumfabrik-musikprobenraeume.jpg);
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.kulturverein {
+  background-color: #EF597B;
+  background-image: url(/img/kulturverein-flyer.jpg);
+  grid-column: span 2;
+}
+
+.kaff {
+  background-color: #4FB544;
+  background-image: url(/img/kaff-im-dunkeln.jpg);
+  background-position: 50% 85%;
+  grid-column: span 2;
+}
+
+@media screen and (min-width: 650px) {
+  .freiraum {
+    grid-row: span 4;
+    grid-column: span 1;
+  }
+
+  .kulturverein, .kaff {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(max(4rem, min(50vh, 50vw)), 12rem);
+  height: min(max(4rem, min(50vh, 50vw)), 12rem);
+  border-radius: 50%;
+  background-color: #F6A81C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: min(max(1rem, min(7vh, 7vw)), 1.6rem);
+  font-weight: bold;
+}
+
+/*******************************************************/
+
+footer {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  background-color: #333;
+}
+
+footer a {
+  margin: 0 1rem;
+}

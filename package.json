@@ -1,0 +1,13 @@
+{
+  "name": "freiraum-petersburg",
+  "version": "1.0.0",
+  "description": "A simple static page for Freiraum Petersburg",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "browser-sync": "^2.26"
+  }
+}
