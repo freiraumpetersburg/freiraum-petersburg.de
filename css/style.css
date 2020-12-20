@@ -180,10 +180,6 @@ main {
 }
 
 .tile__content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   padding-top: min(max(1rem, 5vh), 6rem);
   padding-bottom: min(max(1rem, 5vh), 6rem);
   padding-left: min(max(1rem, 5vw), 6rem);
@@ -197,6 +193,13 @@ main {
 }
 
 @media screen and (orientation: portrait) {
+  .tile__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
   .kulturverein .tile__content > *,
   .kaff .tile__content > * {
     flex: 1 0 48%;
