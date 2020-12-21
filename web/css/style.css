@@ -48,7 +48,7 @@ p {
   margin: 0.5rem 0;
 }
 
-@media screen and (min-width: 800px) and (min-height: 800px) {
+@media screen and (min-width: 60rem) and (min-height: 50rem) {
   p {
     margin: 1rem 0;
   }
